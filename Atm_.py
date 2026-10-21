@@ -27,11 +27,19 @@
 
 #Constructor
 
-class Campusx:
 
-    def __init__(self):
+# class is a keyword used to create a class
+# class name must be in Pascal case 
+class Atm:
 
+    # init is a spl method its automatically called when obj is created
+    def __init__(self): #Used to define a function
+                        #init is a function name
+                        #Self used to refer a Obj(which are dealing with)
         self.pin = ""
+                        # here self is current Obj
+                        # . to access something associated with that obj
+                        # pin = name of the data u want to access
         self.balance = 0
 
         self.menu()
@@ -87,10 +95,10 @@ class Campusx:
 
     def check_balance(self):
         temp = input("Enter your pin ")
-        if temp == self.pin:
+        if temp == self.pin: 
             print(self.balance)
         else:
             print(" Invalid Pin")
 
 
-obj = Campusx()
+obj = Atm()

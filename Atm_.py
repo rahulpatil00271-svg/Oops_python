@@ -2,8 +2,8 @@
 
 # Oops helps to specify code and write codes in minimum lines#
 
-#---------------------------------------------------------------
-#Class is a Blue Print
+#---------------N----{"\-098765-------------------------------------
+#Class is a Blue MPrint
 #---------------------------------------------------------------
 
 #Class : 
@@ -19,7 +19,7 @@
 ##syntax to define Obj:
 # wagnor=Car()
 
-#---------------------------------------------------------------
+#------------------,L̥---------------------------------------------
 
 #Function : which is not written inside a Class
 #Method : which is Written in a Class

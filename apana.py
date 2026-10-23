@@ -147,21 +147,21 @@
   #:- Hinding the impletion details of a class and only showing the essentials features to the user.
   #: Basically hiding unnecessary stuff
 
-class Car:
-    def __init__(self):
-        ##:- At the Begining car is not started so everything is False
-        self.acc = False
-        self.brk = False
-        self.clutch = False
+# class Car:
+#     def __init__(self):
+#         ##:- At the Begining car is not started so everything is False
+#         self.acc = False
+#         self.brk = False
+#         self.clutch = False
 
-        ##:- To start it,s True again
-    def start(self):
-        self.clutch = True
-        self.acc = True
-        print(" Car Started....!!!")
+#         ##:- To start it,s True again
+#     def start(self):
+#         self.clutch = True
+#         self.acc = True
+#         print(" Car Started....!!!")
 
-car1= Car() #Obj is created
-car1.start() # Unnecessary features are hidden
+# car1= Car() #Obj is created
+# car1.start() # Unnecessary features are hidden
 
 #----------------------------------------------------------
 #----------------------------------------------------------
@@ -176,34 +176,107 @@ car1.start() # Unnecessary features are hidden
 #   creat methods for debit, credit & printing the Balance.
 
 
-class Account :
-    def __init__(self,balc,acc):
-        self.balc = balc 
-        self.acc = acc
+# class Account :
+#     def __init__(self,balc,acc):
+#         self.balc = balc 
+#         self.acc = acc
 
-    def debit(self,amount):
-        self.balc -= amount
-        print(" Rs. ", amount," Was debited ")
-        print("Total Balance = ", self.get_balc())
+#     def debit(self,amount):
+#         self.balc -= amount
+#         print(" Rs. ", amount," Was debited ")
+#         print("Total Balance = ", self.get_balc())
 
-    def credit(self,amount):
-        self.balc += amount
-        print(" Rs. ", amount," was credited ")
-        print("Total Balance = ", self.get_balc())
+#     def credit(self,amount):
+#         self.balc += amount
+#         print(" Rs. ", amount," was credited ")
+#         print("Total Balance = ", self.get_balc())
 
-    def get_balc(self):
-        return self.balc
+#     def get_balc(self):
+#         return self.balc
 
-acc1 = Account(10000, 123777)
-print(acc1.balc)
-print(acc1.acc)
+# acc1 = Account(10000, 123777)
+# print(acc1.balc)
+# print(acc1.acc)
 
-acc1.debit(1000)
-acc1.credit(5000)
+# acc1.debit(1000)
+# acc1.credit(5000)
 
-acc2 = Account(40000,443947)
-print(acc2.balc)
-print(acc2.acc)
+# acc2 = Account(40000,443947)
+# print(acc2.balc)
+# print(acc2.acc)
 
-acc2.debit(300)
-acc2.credit(9000)
+# acc2.debit(300)
+# acc2.credit(9000)
+
+
+
+
+#### Del Keyword####
+# : Used to delete Obj properties or obj itself
+
+
+# class Student:
+#     def __init__(self,name):
+#         self.name = name
+
+# s1 = Student("Rahul")
+# print(s1.name)
+# del s1.name   # deletes s1.name
+# print(s1.name) # This will give error as attribute s1.name is deleted
+
+#---------------------------------------
+########### private(like)  method and attributes  ########
+# class Account:
+#     def __init__(self, acc_no, acc_pass):
+#         self.acc_no = acc_no
+#         self.__acc_pass = acc_pass # Here underscore __ is used make a obj private 
+
+# acc1 = Account(" 12221", "abcdefg")
+
+# print(acc1.acc_no) #it can be public
+# print(acc1.__acc_pass) #can't be public
+
+#-----------------------------------------
+
+# class Person:
+#     __name = " annonymous"
+
+#     def __hello(self):
+#         print(" Hello, Guysss!!!!!!!")
+
+#     def wellcome(self):
+#         self.__hello()
+#     # Note : As it's defined under class method so it can be accesed even though it's private (__)
+# p1 = Person()
+# print(p1.wellcome()) # No error it will give Hello Guysss
+
+##print(p1.__hello()) # : Will give error as it,s outside the class
+
+
+
+
+####### 3. Inheritance ######
+
+# : when one class(child/derived) derives the properties & methods of another class(parent/base)
+
+
+# : Parent Class
+class Car:
+  @staticmethod
+  def start():
+    print(" Car Started.. ")
+
+  @staticmethod
+  def stop():
+    print(" Car Stopped ")
+
+# : Child Class 
+class ToyotaCar(Car): ### : characteristics inherited are mentioned inside parenthsis()
+  def __init__(self,name):
+    self.name = name
+
+car1 = ToyotaCar(" Fortuner")
+car2 = ToyotaCar(" Prius")
+
+print(car1.name) #: Name of car will be printed
+print(car1.start()) #: Even though Start is not in in ToyotaCar(chld) it's inherited from Car(parent) 

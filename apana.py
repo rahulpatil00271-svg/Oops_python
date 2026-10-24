@@ -260,23 +260,88 @@
 # : when one class(child/derived) derives the properties & methods of another class(parent/base)
 
 
-# : Parent Class
-class Car:
-  @staticmethod
-  def start():
-    print(" Car Started.. ")
+# # : Parent Class
+# class Car:
+#   color = " Black "
+#   @staticmethod
+#   def start():
+#     print(" Car Started.. ")
 
-  @staticmethod
-  def stop():
-    print(" Car Stopped ")
+#   @staticmethod
+#   def stop():
+#     print(" Car Stopped ")
 
-# : Child Class 
-class ToyotaCar(Car): ### : characteristics inherited are mentioned inside parenthsis()
-  def __init__(self,name):
-    self.name = name
+# # : Child Class 
+# class ToyotaCar(Car): ### : characteristics inherited are mentioned inside parenthsis()
+#   def __init__(self,name):
+#     self.name = name
 
-car1 = ToyotaCar(" Fortuner")
-car2 = ToyotaCar(" Prius")
+# car1 = ToyotaCar(" Fortuner")
+# car2 = ToyotaCar(" Prius")
 
-print(car1.name) #: Name of car will be printed
-print(car1.start()) #: Even though Start is not in in ToyotaCar(chld) it's inherited from Car(parent) 
+# print(car1.name) #: Name of car will be printed
+# print(car1.start()) #: Even though Start is not in in ToyotaCar(chld) it's inherited from Car(parent) 
+# print(car1.color)
+
+
+#_____ # Types In INheritance # ______#
+
+#------------------------------
+# single Inheritance #
+#:- Base --> derived(child)
+#------------------------------
+
+#------------------------------
+# Multi-level Inheritance #
+#----------------------------
+# #Ex.
+# # Parent 
+# class Car:
+#   color = " Black "
+#   @staticmethod
+#   def start():
+#     print(" Car Started.. ")
+
+#   @staticmethod
+#   def stop():
+#     print(" Car Stopped ")
+
+# # : Child Class 
+# class ToyotaCar(Car):
+#   def __init__(self,brand):
+#     self.brand = brand
+
+# # : Properties of both ToyotaCar & Car
+# class Fortuner(ToyotaCar):
+#   def __init__(self,type):
+#     self.type= type
+
+
+
+#---------------------------------------------
+# multiple inheritance #
+
+# #Base 1 + #base2 ---> #Derived
+
+# #Parent 1
+# class A:
+#   varA = " Wellcome to class A"
+
+# #parent 2
+# class B:
+#   varB = " wellcome to Class B "
+
+# #Child 
+# class C(A,B):
+#   varC = " Wellcome to Class C"
+# #obj of C
+# c1 = C()
+
+# print(c1.varC)
+# print(c1.varB)
+# print(c1.varA)
+
+#----------------------------------
+# Super Method # (Related to inheritance)
+#Super() method is uded to access methods of parent Class
+#
